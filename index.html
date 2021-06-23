@@ -1,0 +1,77 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Calculadora</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css"><!--Estilo CSS-->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"><!--Normalize CSS-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"><!--Bootstrap 4-->
+		<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<![endif]-->
+	</head>
+	<body style="background: #d9d9d9;">
+		<div class="container"><!--Início do container-->
+			<div class="row">
+				<div class="col d-flex justify-content-center"><br>
+					<div class="calculadora"><!--Início da calculadora-->
+						<!--Input onde mostra o resultado para o usuário na tela principal-->
+						<input 
+							type="text" 
+							class="form-control resultado" 
+							placeholder="0" 
+							disabled="disabled"
+							id="resultado" 
+						>
+						<div class="row"><!--Início da Primeira linha de opções dentro da calculadora-->
+							<!--Botão de limpar-->
+							<button onclick="calcular('acao', 'c')" type="button" class="btn btn-dark btn-lg clear font-weight-light">C</button>
+							<!--Botão operador de divisão-->
+							<button onclick="calcular('acao', '/')" type="button" class="btn btn-dark btn-lg font-weight-light">/</button>
+							<!--Botão operador de multiplicação-->
+							<button onclick="calcular('acao', '*')" type="button" class="btn btn-dark btn-lg font-weight-light">X</button>
+						</div><!--Fim da Primeira linha de opções dentro da calculadora-->
+						<div class="row"><!--Início da segunda linha de opções dentro da calculadora-->
+							<!--Botão número 7-->
+							<button onclick="calcular('valor', 7)" type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
+							<!--Botão número 8-->
+							<button onclick="calcular('valor', 8)" type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
+							<!--Botão número 9-->
+							<button onclick="calcular('valor', 9)" type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
+							<!--Botão operador de subtração-->
+							<button onclick="calcular('acao', '-')" type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
+						</div><!--Fim da segunda linha de opções dentro da calculadora-->
+						<div class="row"><!--Início da terceira linha de opções dentro da calculadora-->
+							<!--Botão número 4-->
+							<button onclick="calcular('valor', 4)" type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
+							<!--Botão número 5-->
+							<button onclick="calcular('valor', 5)" type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
+							<!--Botão número 6-->
+							<button onclick="calcular('valor', 6)" type="button" class="btn btn-dark btn-lg font-weight-light">6</button>
+							<!--Botão operador de adição-->
+							<button onclick="calcular('acao', '+')" type="button" class="btn btn-dark btn-lg font-weight-light">+</button>
+						</div><!--Fim da terceira linha de opções dentro da calculadora-->
+						<div class="row"><!--Início da quarta linha de opções dentro da calculadora-->
+							<!--Botão número 1-->
+							<button onclick="calcular('valor', 1)" type="button" class="btn btn-dark btn-lg font-weight-light">1</button>
+							<!--Botão número 2-->
+							<button onclick="calcular('valor', 2)" type="button" class="btn btn-dark btn-lg font-weight-light">2</button>
+							<!--Botão número 3-->
+							<button onclick="calcular('valor', 3)" type="button" class="btn btn-dark btn-lg font-weight-light">3</button>
+							<!--Botão operador de igualdade-->
+							<button onclick="calcular('acao', '=')" type="button" class="btn btn-dark btn-lg enter">=</button>
+						</div><!--Fim da quarta linha de opções dentro da calculadora-->
+						<div class="row" style="margin-top: -60px">
+							<!--Botão número 0-->
+							<button onclick="calcular('valor', 0)" type="button" class="btn btn-dark zero btn-lg font-weight-light">0</button>
+							<!--Botão da vírgula-->
+							<button onclick="calcular('acao', '.')" type="button" class="btn btn-dark btn-lg font-weight-light">.</button>
+						</div>
+					</div><!--Fim da calculadora-->
+				</div>
+			</div>
+		</div><!--Fim do container-->
+		<!--JavaScript-->
+		<script src="js/script_principal.js"></script>
+	</body>
+</html>
